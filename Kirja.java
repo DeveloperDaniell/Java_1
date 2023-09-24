@@ -3,6 +3,7 @@ public class Kirja {
     private String isbn;
     private double hinta;
     private int julkaisuvuosi;
+    private Kustantaja kustantaja;
 
     public String getNimi() {
         return nimi;
@@ -36,6 +37,14 @@ public class Kirja {
         this.julkaisuvuosi = julkaisuvuosi;
     }
 
+    public Kustantaja getKustantaja() {
+        return kustantaja;
+    }
+
+    public void setKustantaja(Kustantaja kustantaja) {
+        this.kustantaja = kustantaja;
+    }
+
     public Kirja() {
         this.nimi = "";
         this.isbn = "";
@@ -48,11 +57,17 @@ public class Kirja {
         this.isbn = isbn;
         this.hinta = hinta;
         this.julkaisuvuosi = julkaisuvuosi;
+        this.kustantaja = null;  // alustetaan kustantaja arvoksi null
     }
+    
 
     @Override
-    public String toString() {
-        return "Nimi: " + nimi + "\nIsbn: " + isbn + "\nHinta: " + String.format("%.2f", hinta) + "\nJulkaisuvuosi: " + julkaisuvuosi;
-    }
+        public String toString() {
+            return "Nimi: " + nimi + 
+                "\nIsbn: " + isbn + 
+                "\nHinta: " + String.format("%.2f", hinta) + 
+                "\nJulkaisuvuosi: " + julkaisuvuosi + 
+                "\nKustantaja: " + kustantaja.toString();  // Lisää kustantajan tiedot
+        }
 
 }

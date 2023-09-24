@@ -6,7 +6,8 @@ public class Asunto {
     private double pintaAla;
     private double hinta;
     private String kuvaus;
-
+    
+// Parametrtiton konstruktori
     public Asunto() {
         this.tyyppi = "";
         this.osoite = "";
@@ -14,7 +15,7 @@ public class Asunto {
         this.hinta = 0.0;
         this.kuvaus = "";
     }
-
+// Parametrillinen konstruktori
     public Asunto(String tyyppi, String osoite, double pintaAla, double hinta, String kuvaus) {
         this.tyyppi = tyyppi;
         this.osoite = osoite;
